@@ -1,0 +1,610 @@
+/*
+Theme Name: GoFirst Custom Theme 
+Theme URI:  
+Description:  My First WordPress Theme created for WEB170 class
+Author: Gordana Minovska
+Author URI: 
+Version:  1.0
+
+Tags: Responsive
+
+License:
+
+License URI:
+
+General comments (optional).
+ */
+
+ 
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+/*
+background colors: #1e2b30;
+background: #2f3238; original
+*/
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', Arial, sans-serif;
+    
+}
+
+body {
+	background: #1e2b30;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+    line-height: 2.2em;
+}
+
+a {
+	outline: none;
+/*	color: #dbb634;*/
+	color: #c1774c;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #528cb3;
+}
+
+.grid section {
+	padding: 1em;
+	text-align: center;
+}
+
+section p, section h3{
+    padding: 0 1em;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.content > h2 {
+	clear: both;
+	margin: 0;
+	padding: 4em 1% 0;
+	color: #484B54;
+	font-weight: 800;
+	font-size: 1.5em;
+}
+
+.content > h2:first-child {
+	padding-top: 0em;
+}
+
+/* Header */
+.header {
+	margin: 0 auto;
+	padding: 3em 1em;
+    padding-bottom: 1em;
+	text-align: center;
+}
+
+.header h1 {
+	margin: 0;
+	font-weight: 800;
+	font-size: 4em;
+	line-height: 1.3;
+    font-family: 'Cinzel Decorative', Arial, sans-serif;
+}
+
+.header h1 span {
+	display: block;
+	padding: 0 0 0.6em 0.1em;
+	color: #74777b;
+	font-weight: 300;
+	font-size: 45%;
+}
+
+/* Demo links */
+.main-nav {
+	clear: both;
+    margin-top: -90px;
+	text-align: center;
+    border-style: solid;
+border-width: 150px 0px 62px;
+    border-color: #1e2b30;
+-moz-border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+-webkit-border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+-o-border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+/*border-width: 68px 0px 66px;
+-moz-border-image: url(img/img/border-min.png) 525 134 669 0 repeat stretch;
+-webkit-border-image: url(img/img/border-min.png) 525 134 669 0 repeat stretch;
+-o-border-image: url(img/img/border-min.png) 525 134 669 0 repeat stretch;
+border-image: url(img/img/border-min.png) 525 134 669 0 repeat stretch;*/
+}
+.main-nav ul {
+    list-style: none;
+}
+
+
+
+.main-nav ul li  {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 0 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+/*
+.main-nav a.current {
+	background: #3c414a;
+	color: #fff;
+}
+*/
+
+
+
+/*Image container*/
+/*#image-container {
+    background: url(img/herbs-spices.jpg) left top no-repeat;
+    box-shadow: 25px 25px 50px 0 #1e2b30 inset, -25px -25px 50px 0 #1e2b30 inset; 
+    width: 1000px;
+    height: 300px;}*/
+/*Animated images*/
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+/*	padding: 1em 0 4em;*/
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+.recipes figure{
+    position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 300px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 31%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+/*	text-transform: uppercase;*/
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+/*	font-size: 78.5%;*/
+    font-family: 'Seaweed Script', Arial, sans-serif;
+    color: darksalmon;
+    
+}
+
+.main_text {
+    position: relative;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+    
+	width: 48%;
+    
+}
+
+.main_text h2 {
+    font-family: 'Cinzel Decorative', Arial, sans-serif;
+}
+
+.main_text h2 span
+{
+    color: #9d7b62;
+    font-family: 'Seaweed Script', Arial, sans-serif;
+}
+
+
+
+.full_width {
+    text-align: inherit;
+}
+
+.full_width h2, .full_width h3, .full_width h4, .full_width h5, .full_width h6 {
+    font-family: 'Cinzel Decorative', Arial, sans-serif;
+    color: darksalmon;
+}
+
+.main-column{
+    width: 70%;
+    float: left;
+    text-align: inherit;
+    
+}
+
+.side-column {
+    width: 30%;
+    float: right;
+    border-left: 1px solid #fff;
+}
+
+
+/*---------------*/
+/***** Sadie *****/
+/*---------------*/
+
+figure.effect-sadie figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+
+figure.effect-sadie h2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #1e2b30;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-sadie p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+
+figure.effect-sadie:hover h2 {
+	color: #fff;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+figure.effect-sadie:hover figcaption::before ,
+figure.effect-sadie:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*---------------*/
+/***** Lexi *****/
+/*---------------*/
+
+figure.effect-lexi {
+	background: -webkit-linear-gradient(-45deg, #000 0%,#fff 100%);
+	background: linear-gradient(-45deg, #000 0%,#fff 100%);
+}
+
+figure.effect-lexi img {
+	margin: -10px 0 0 -10px;
+	max-width: none;
+	width: -webkit-calc(100% + 10px);
+	width: calc(100% + 10px);
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(10px,10px,0);
+	transform: translate3d(10px,10px,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-lexi figcaption::before,
+figure.effect-lexi p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-lexi figcaption::before {
+	position: absolute;
+	right: -100px;
+	bottom: -100px;
+	width: 300px;
+	height: 300px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 900px rgba(255,255,255,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transform: scale3d(0.5,0.5,1);
+	transform: scale3d(0.5,0.5,1);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+figure.effect-lexi:hover img {
+	opacity: 0.6;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-lexi h2 {
+	text-align: left;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(5px,5px,0);
+	transform: translate3d(5px,5px,0);
+}
+
+figure.effect-lexi p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 1.5em 1.5em 0;
+	width: 140px;
+	text-align: right;
+	opacity: 0;
+	-webkit-transform: translate3d(20px,20px,0);
+	transform: translate3d(20px,20px,0);
+}
+
+figure.effect-lexi:hover figcaption::before {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-lexi:hover h2,
+figure.effect-lexi:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*---------------*/
+/***** Ming *****/
+/*---------------*/
+
+figure.effect-ming {
+	background: #030c17;
+}
+
+figure.effect-ming img {
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-ming figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.4,1.4,1);
+	transform: scale3d(1.4,1.4,1);
+}
+
+figure.effect-ming h2 {
+	margin: 20% 0 10px 0;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-ming p {
+	padding: 1em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+figure.effect-ming:hover h2 {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+figure.effect-ming:hover figcaption::before,
+figure.effect-ming:hover p {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-ming:hover figcaption {
+	background-color: rgba(58,52,42,0);
+}
+
+figure.effect-ming:hover img {
+	opacity: 0.4;
+}
+
+
+/*Footer styles*/
+
+footer {
+    clear: both;
+    display: flex;
+  justify-content: space-around;
+    
+    border-style: solid;
+border-width: 150px 0px 62px;
+    border-color: #1e2b30;
+-moz-border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+-webkit-border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+-o-border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
+}
+
+footer p {
+    padding: 1%;
+    font-size: .8em;
+    color: darksalmon;
+}
+/*404 styles*/
+.error_page {
+    background-color: #859196
+}
+.container404 {
+    width: 900px;
+    height: 700px;
+    position: relative;
+    margin: 0 auto;
+    background: url(img/border_small.png) no-repeat right top;    
+}
+
+.container404 h1 {
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    font-size: 6em;
+    font-family: 'Cinzel Decorative', Arial, sans-serif;
+    color: #423b35;
+}
+
+.container404 img {
+    
+    position: absolute;
+    top: 164px;
+    left: 400px;
+    z-index: 1;
+}
+
+.container404 p {
+    position: absolute;
+    top: 320px;
+    left: 117px;
+    font-size: 2em;
+    font-family: 'Cinzel Decorative', Arial, sans-serif;
+    color: #423b35;
+}
+
+.container404 a {
+    position: absolute;
+    top: 423px;
+    left: 364px;
+    font-size: 2em;
+    font-family: 'Seaweed Script', Arial, sans-serif;
+    color: #423b35;
+}
+
+/*Read more styles*/
+
+.slide img {
+    max-width: 40%;
+    float: left;
+    padding-right: 1em;
+    
+}
+
+article a {
+    margin-left: 246px;
+    font-size: 2em;
+    font-family: 'Seaweed Script', Arial, sans-serif;
+    
+}
+
+/*post styles*/
+
+.post img {
+    float: right;
+    max-width: 450px;
+    padding: 1em;
+    
+}
