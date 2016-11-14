@@ -32,20 +32,11 @@ endwhile;
 endif;
 		?>
   
-                  
-                </section>        
-                <section class = "side-column">
-                
-                <h3>Basic principles of Ayurveda</h3>
-                    <p>Sed cursus feugiat risus, nec commodo est tempus nec. Sed leo nisi, congue ac mollis vitae, aliquet sed sem. Suspendisse ultricies ante non sapien iaculis lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis arcu bibendum augue eleifend semper. Sed consectetur risus in orci iaculis, ac tempus dolor tristique. Nulla fermentum egestas fermentum.</p>
-                
-                </section>
+           </section>  
 				
-           	
-
-		
+    
 	</div><!-- #content -->
 
 <?php
-
+get_sidebar();
 get_footer(); ?>

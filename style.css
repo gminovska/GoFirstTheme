@@ -304,7 +304,11 @@ border-image: url(img/img/border-min.png) 525 134 669 0 repeat stretch;*/
     border-left: 1px solid #fff;
 }
 
+/*Sidabar styles*/
 
+#secondary section {
+	padding-left: 2em;
+}
 /*---------------*/
 /***** Sadie *****/
 /*---------------*/
