@@ -291,7 +291,7 @@ border-image: url(img/img/border-min.png) 525 134 669 0 repeat stretch;*/
     color: darksalmon;
 }
 
-.main-column{
+.main-column ,.site-main{
     width: 70%;
     float: left;
     text-align: inherit;
@@ -522,7 +522,7 @@ figure.effect-ming:hover img {
 
 /*Footer styles*/
 
-footer {
+#main-footer {
     clear: both;
     display: flex;
   justify-content: space-around;
@@ -536,7 +536,7 @@ border-width: 150px 0px 62px;
 border-image: url(img/border-min.png) 558 134 416 0 repeat stretch;
 }
 
-footer p {
+#main-footer p {
     padding: 1%;
     font-size: .8em;
     color: darksalmon;
@@ -590,7 +590,7 @@ footer p {
 
 /*Read more styles*/
 
-.slide img {
+/*.slide img {
     max-width: 40%;
     float: left;
     padding-right: 1em;
@@ -602,7 +602,7 @@ article a {
     font-size: 2em;
     font-family: 'Seaweed Script', Arial, sans-serif;
     
-}
+}*/
 
 /*post styles*/
 
@@ -611,4 +611,17 @@ article a {
     max-width: 450px;
     padding: 1em;
     
+}
+
+.screen-reader-text {
+	display: none;
+}
+/*Single Post Styles*/
+.comments-link {
+	display: block;
+}
+
+.entry-meta {
+	font-size: .8em;
+	line-height: 1.3em;
 }

@@ -1,6 +1,6 @@
 </div><!-- /container -->
 		
-<footer>
+<footer id= "main-footer">
 
     <p>Copyright &copy; 2016 Ayurveda</p>
     <p>All rights reserved</p>
