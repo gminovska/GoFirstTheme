@@ -41,6 +41,9 @@ function goayurveda_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size (600, 220, true);
+add_image_size('goayurveda-small-thumb', 300, 150, true);
+add_image_size('goayurveda-page-thumb', 1000, 450, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
