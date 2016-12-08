@@ -116,10 +116,14 @@ a:hover, a:focus {
     font-weight: 300;
     font-size: 45%;
 }
-
+.header h1 a {
+  color: white;
+}
 
 /* Demo links */
-
+.menu-navigation-container {
+  background-color: white;
+}
 .main-nav {
     clear: both;
     margin-top: -90px;
@@ -622,7 +626,16 @@ figure.effect-ming:hover img {
     display: none;
 }
 
-
+.search-field {
+  background-color: #1e2b30;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.search-submit {
+  background-color: #1e2b30;
+  border: 1px solid white;
+  color: white;
+}
 /*Single Post Styles*/
 
 .comments-link {
@@ -875,3 +888,47 @@ max-width: 100%;
 	display: block;
 	margin: 0 auto;
 }
+/*Contact form*/
+div.wpcf7 {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+label {
+  font-family: 'Seaweed Script', Arial, sans-serif;
+  font-size: 1.3em;
+}
+.wpcf7-text {
+  background-color: #1e2b30;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 70%;
+  margin: 0 auto;
+  height: 2em;
+  font-size: 1.2em;
+  color: #528cb3;
+
+}
+.wpcf7-textarea {
+  width: 70%;
+  background-color: #1e2b30;
+  border: 1px solid white;
+  font-size: 1.2em;
+  color: #528cb3;
+}
+.wpcf7-submit {
+  width: 50%;
+  background-color: #1e2b30;
+  font-family: 'Seaweed Script', Arial, sans-serif;
+  border: 1px solid white;
+  height: 2em;
+  font-size: 1.2em;
+  color: #528cb3;
+}
+/* Media queries*/
+@media only screen and (max-device-width: 480px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+	}
